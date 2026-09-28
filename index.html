@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9"><title>cherryladyenglish — Autumn Tree Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,20,1;9..144,600,20,1;9..144,700,20,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="decor decor-a">✦</div><div class="decor decor-b">✳</div><div class="decor decor-c">✧</div>
+<header class="site-head"><a class="brand" href="https://t.me/cherryladyenglish" target="_blank" rel="noopener noreferrer" aria-label="cherryladyenglish on Telegram"><img class="brand-logo" src="cherrylady-logo.png" alt=""><span>cherryladyenglish</span></a><span class="head-note">AUTUMN SEASON <span>✦</span></span></header>
+<main id="app" class="shell">
+  <section id="start" class="screen start-screen">
+    <div class="start-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE LEAF ENGLISH ADVENTURE</div>
+      <h1>The Autumn Tree<br><em>Challenge</em></h1>
+      <p class="subtitle">Present Simple or Present Continuous?</p><p class="intro">Help the tree grow through the seasons. Choose the form that fits, collect golden leaves, and see how far your grammar can take you.</p>
+      <button id="startBtn" class="primary-btn">START TRAINER <span>→</span></button>
+      <div class="start-meta"><span>28 CHALLENGES</span><i></i><span>INSTANT FEEDBACK</span><i></i><span>NO LOGIN</span></div>
+    </div>
+    <div class="hero-verbs" aria-label="Verbs in this adventure"><span>THINK</span><span>SEE</span><span>HAVE</span><span>LOOK</span><span>TASTE</span><span>SMELL</span><span>WEIGH</span><span>BE</span></div>
+  </section>
+  <section id="trainer" class="screen trainer-screen hidden">
+    <div class="trainer-chrome"><div class="trainer-top"><a class="trainer-brand" href="https://t.me/cherryladyenglish" target="_blank" rel="noopener noreferrer"><img class="brand-logo" src="cherrylady-logo.png" alt=""> cherryladyenglish</a><div class="challenge-label"><span class="mini-star">✦</span><span id="challengeCount">ROUND 1 · CHALLENGE 1 / 14</span></div><div class="score-pill"><span>⭐</span><b id="score">0</b><small>POINTS</small></div></div>
+    <div class="progress-track"><div id="progressBar" class="progress-fill"></div><span id="progressDot" class="progress-dot">✦</span></div></div>
+    <div id="levelLine" class="level-line"><span class="level-icon">🍂</span><span id="seasonLineLabel">LATE SUMMER</span><span class="level-rule"></span><span id="levelHint">Every correct answer brings autumn closer.</span></div>
+    <div id="gameLayout" class="game-layout"><aside class="tree-card" aria-label="Autumn tree illustration"><div class="game-tree"><div class="game-tree-sky"></div><div class="tree-art"><img class="tree-illustration" src="autumn-tree-bare.png" alt="" aria-hidden="true"><div id="branchLeaves" class="branch-leaves"></div></div><div id="leafPile" class="leaf-pile" aria-hidden="true"></div></div></aside>
+    <article id="questionCard" class="question-card"><div class="q-decoration">✧</div><div class="leaf-prompt">A NEW LEAF IS WAITING...</div><div id="typeLabel" class="type-label">PICK THE RIGHT FORM</div><div id="questionText" class="question-text"></div><div id="promptExtra" class="prompt-extra"></div><div id="answerArea" class="answer-area"></div><div id="feedback" class="feedback hidden" aria-live="polite"></div></article>
+    </div>
+    <div class="trainer-footer"><span id="encouragement">You’ve got this <span>✿</span></span><button id="checkBtn" class="primary-btn check-btn" disabled>CHECK ANSWER <span>→</span></button></div>
+  </section>
+  <section id="roundBreak" class="screen round-break hidden"><a class="round-break-brand" href="https://t.me/cherryladyenglish" target="_blank" rel="noopener noreferrer"><img class="brand-logo" src="cherrylady-logo.png" alt=""> cherryladyenglish</a><div class="round-leaf-art">🍂</div><div class="eyebrow">ROUND ONE COMPLETE</div><h2>Your tree is changing!</h2><p>Fourteen challenges down. Take a breath, then head into Round Two.</p><div class="round-score"><span>ROUND ONE SCORE</span><strong id="roundOneScore">0 / 14</strong></div><button id="continueRoundBtn" class="primary-btn">START ROUND TWO <span>→</span></button></section>
+  <section id="result" class="screen result-screen hidden"><div class="final-copy"><div class="result-badge">🍂</div><div class="eyebrow">THE SEASON HAS TURNED</div><h2 id="resultTitle">AUTUMN HAS ARRIVED</h2><p id="resultSubtitle" class="result-sub">You helped the tree change with the season.</p><div class="final-leaves"><span id="finalLeafCount">28 / 28 leaves</span></div></div><div class="final-tree"><img src="autumn-tree-bare.png" alt="The tree at the end of autumn"><div id="finalLeafPile" class="final-leaf-pile" aria-hidden="true"></div></div>
+    <div class="result-summary"><div class="result-score"><span>CHALLENGES COMPLETE</span><strong id="finalScore">28 / 28</strong><div class="result-bar"><i id="resultBar"></i></div></div><div class="result-stats"><div><span class="stat-icon green">✓</span><span>Correct</span><b id="correctCount">0</b></div><div><span class="stat-icon coral">↺</span><span>Review</span><b id="reviewCount">0</b></div><div><span class="stat-icon blue">◎</span><span>Accuracy</span><b id="accuracy">0%</b></div></div></div>
+    <div id="practised" class="practised"><span>WHAT YOU PRACTISED</span><div id="verbTags"></div></div><div id="reviewPanel" class="review-panel hidden"><h3>↺ Review your mistakes</h3><div id="mistakeList"></div></div>
+    <div class="result-actions"><button id="reviewToggleBtn" class="secondary-btn">REVIEW MISTAKES</button><button id="tryAgainBtn" class="primary-btn">PLAY AGAIN <span>↻</span></button><button id="backBtn" class="secondary-btn">BACK TO HOME</button></div>
+  </section>
+</main><footer class="site-foot">MADE FOR CURIOUS MINDS <span>✦</span> NO LOGIN NEEDED</footer>
+<div id="badgeToast" class="badge-toast" role="status"></div><script src="questions.js"></script><script src="app.js"></script>
+</body></html>
